@@ -116,7 +116,15 @@ git remote add upstream https://github.com/nccgroup/ScoutSuite
 pull updates
 
 ```bash
-git pull origin master
-git pull upstream master
-```
+git checkout -b upstream-master upstream/master
+# pull all updates from upstream
+git pull
 
+# go back to origin/master branch to rebase upstream changes onto our own
+git checkout master
+git rebase upstream-master
+# resolve conflicts if any
+
+# push all updated changes to origin/master branch
+git push
+```
