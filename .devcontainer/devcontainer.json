@@ -8,14 +8,14 @@
         "vscode": {
             "extensions": [
                 "ms-python.python",
-                "ms-python.vscode-pylance",
-                "ms-azuretools.vscode-docker"
+                "ms-python.vscode-pylance"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/usr/local/bin/python",
                 "python.linting.enabled": true,
                 "python.linting.pylintEnabled": true,
-                "python.formatting.provider": "black"
+                "python.formatting.provider": "black",
+                "terminal.integrated.defaultProfile.linux": "bash"
             }
         }
     },
@@ -23,12 +23,7 @@
     "postCreateCommand": "pip install -e .",
     "remoteUser": "vscode",
     "mounts": [
-        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
-    ],
-    "runArgs": [
-        "--privileged"
-    ],
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-    }
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=aws_volume,target=/home/vscode/.aws,type=volume"
+    ]
 }
