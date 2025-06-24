@@ -39,7 +39,7 @@ The following cloud providers are currently supported:
 3. **Connect via VS Code or Cursor:**
    - Open VS Code or Cursor
    - Use `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the command palette
-   - enter "Open folder in container"
+   - enter "Reopen in container"
 
    This will automatically open VS Code with the remote connection established.
 
